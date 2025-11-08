@@ -42,75 +42,83 @@ pet_human_classifier/
    pip install -r requirements.txt  
 3. Download or prepare your dataset into the data/ folder as per the structure above
 
-📊 Evaluation & Metrics
+## 📊 Evaluation & Metrics  
 
-After training/evaluation you should report key metrics such as:
+After training and evaluation, report the following key performance metrics:  
 
-Accuracy
+- **Accuracy**  
+- **Precision**, **Recall**, and **F1-score** for each class  
+- **Confusion Matrix**  
+- *(Optional)* **ROC Curve** and **AUC**  
 
-Precision, Recall, F1-score (for each class)
+You should also include details about your **validation/test split** and mention any potential caveats such as:  
+- Class imbalance (e.g., more pet images than human images)  
+- Variations in image quality, lighting, or background  
 
-Confusion Matrix
+---
 
-(Optional) ROC Curve & AUC
-Include details of your validation/test split and any caveats (class imbalance, image quality variation, etc).
+## 🔍 Model / Architecture Details  
 
-🔍 Model / Architecture Details
+Provide a detailed description of your model configuration and design choices:  
 
-Describe here:
+- **Model Architecture**: (e.g., ResNet50 / MobileNet / Custom CNN)  
+- **Input Image Size**: (e.g., 224 × 224 pixels)  
+- **Preprocessing Steps**: normalization, resizing, augmentation (flip, rotation, zoom, etc.)  
+- **Training Strategy**: transfer learning or training from scratch  
+- **Loss Function**: (e.g., Binary Cross-Entropy)  
+- **Optimizer**: (e.g., Adam / SGD)  
+- **Learning Rate**: specify the value or schedule used  
+- **Model Complexity**: number of parameters, layers, etc.  
+- **Training Environment**: hardware (GPU/CPU), training time  
+- **Classes**: 2 classes — `pet` and `human`  
+- **Label Encoding**: (e.g., `0` for pet, `1` for human)  
 
-Which model architecture you used (e.g., ResNet50/ MobileNet / custom CNN)
+---
 
-Input image size (e.g., 224×224)
+## ✅ Results & Findings  
 
-Pre-processing steps (normalization, augmentation: flip, rotation, zoom)
+Summarize the main findings and performance outcomes from your experiments:  
 
-Any transfer learning used or training from scratch
+- **Training Accuracy & Loss** over epochs  
+- **Validation Accuracy & Loss** trends  
+- **Best Model Checkpoint** performance on the test set  
+- **Sample Predictions** with correctly and incorrectly classified images  
+- **Observed Issues**: misclassifications, bias cases, or unexpected patterns  
 
-Loss function, optimizer, learning rate
+---
 
-Number of parameters, training time, hardware used
+## ⚠️ Limitations & Future Work  
 
-How many classes (2: pet / human) and how class labels are encoded
+### Dataset Limitations  
+- Limited diversity in pet/human categories  
+- Inconsistent lighting, poses, or image backgrounds  
 
-✅ Results & Findings
+### Model Limitations  
+- Possible overfitting on training data  
+- Limited generalization to unseen image types  
 
-Summarise your experiment results:
+### Potential Improvements  
+- Introduce more classes (e.g., *dog*, *cat*, *human*)  
+- Apply more robust augmentations or domain adaptation  
+- Deploy real-time or mobile-friendly models  
+- Add explainability tools (e.g., **Grad-CAM**, **Saliency Maps**)  
+- Expand dataset and improve annotation quality  
 
-Training accuracy & loss over epochs
+---
 
-Validation accuracy & loss
+## 🧪 Contributing  
 
-Best model checkpoint performance on test set
+We welcome contributions!  
 
-Sample predictions with images (good and challenging cases)
+1. **Fork** this repository.  
+2. **Create** a new branch for your feature or fix.  
+3. **Commit** your changes with clear messages.  
+4. **Open** a pull request describing your updates.  
 
-Any failure/bias cases observed
+Please ensure:  
+- Your code includes tests (if applicable).  
+- You follow consistent code style and documentation.  
+- You update this README for any new features or dependencies.  
 
-⚠️ Limitations & Future Work
+---
 
-Dataset limitations: e.g., limited variety of pets/humans, lighting/pose issues
-
-Model limitations: over-fitting, generalisation to unseen types
-
-Potential improvements:
-
-More classes (e.g., dog vs cat vs human)
-
-Better augmentation / domain adaptation
-
-Real-time inference / mobile deployment
-
-Explainability (Saliency maps, Grad-CAM)
-
-Larger dataset, improved annotation
-
-🧪 Contributing
-
-If you’d like to contribute:
-
-Please fork the repository and create a pull request.
-
-Ensure your changes include tests (if applicable) and maintain code style.
-
-Update this README with any new features or dependencies.
